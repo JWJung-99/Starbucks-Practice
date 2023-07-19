@@ -39,8 +39,10 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/signin.css" />
 
     <!-- JavaScript -->
+    <script defer src="/js/signin.js"></script>
     <script defer src="/js/common.js"></script>
   </head>
   <body>
@@ -375,7 +377,77 @@
       </div>
     </header>
 
-    <section class="signin"></section>
+    <!-- SignIn -->
+    <section class="signin">
+      <div class="signin-wrap">
+        <form>
+          <strong class="signin-title">로그인</strong>
+          <div class="signin-form">
+            <p class="signin-welcome">
+              <span>Welcome!</span> 스타벅스 코리아에 오신 것을 환영합니다!
+            </p>
+            <div class="signin-input">
+              <input
+                type="text"
+                maxlength="20"
+                placeholder="아이디를 입력해 주세요."
+              />
+              <input
+                type="password"
+                maxlength="20"
+                placeholder="비밀번호를 입력해 주세요."
+              />
+              <span class="signin-checkbox">
+                <input type="checkbox" name="idRemb" />
+                <label for="idRemb" class="save-id">아이디 저장</label>
+              </span>
+              <div class="btn-signin">
+                <a href="javascript:void(0)">로그인</a>
+              </div>
+              <p class="signin-warning">
+                * 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이
+                있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.<br />*
+                스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상,
+                Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.
+              </p>
+            </div>
+            <div class="btn-signin-more-group">
+              <ul class="btn-signin-more">
+                <li><a href="javascript:void(0)">회원가입</a></li>
+                <li><a href="javascript:void(0)">아이디 찾기</a></li>
+                <li><a href="javascript:void(0)">비밀번호 찾기</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="signin-captcha">
+            <div class="signin-captcha-info">
+              <p class="signin-captcha-text">
+                아래 이미지의 보안문자를 보이는 대로 입력해주세요.
+              </p>
+            </div>
+            <div class="signin-captcha-input">
+              <div class="signin-captcha-input-wrap">
+                <dl>
+                  <dt>
+                    <label for="captcha">보안문자</label>
+                  </dt>
+                  <dd>
+                    <p class="signin-captcha-img">
+                      <img src="/images/captcha.do" alt="captcha" />
+                    </p>
+                    <a href="javascript:void(0)" class="signin-captcha-refresh"
+                      >새로고침</a
+                    >
+                    <input type="text" maxlength="10" name="captcha" />
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
 
     <!-- footer -->
     <footer>
